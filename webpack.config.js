@@ -27,7 +27,17 @@ module.exports = {
                     options: {
                       sourceMap: isDevelopment
                     }
+                  },
+                   {
+                    loader: 'postcss-loader',
+                    options: {
+                      plugins: function () {
+                        return [
+                          require('autoprefixer')
+                        ];
+                    }
                   }
+                }
                 ]
               },
               {
@@ -77,6 +87,7 @@ module.exports = {
     new MiniCssExtractPlugin({
             filename: isDevelopment ? '[name].css' : '[name].[hash].css',
             chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
-         })
+         }),
+     
   ]
 }

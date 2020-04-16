@@ -1,1 +1,95 @@
-null
+@font-face {
+  font-family: "Jost";
+  src: url("../assets/fonts/RedHatDisplay-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 500vh;
+}
+
+.header {
+  background-image: url(https://via.placeholder.com/1920x550);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
+.navbar-brand img {
+  width: 140px;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+.navbar {
+  padding: 1em 0 !important;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: black !important;
+  position: relative;
+  display: block;
+  font-weight: 500;
+  transition: .5s;
+  z-index: 1;
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #000000;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: .3s;
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #000000;
+  border-radius: 1px;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: .3s;
+}
+
+.nav-link:hover:before {
+  transform: scaleY(1);
+  opacity: 5 !important;
+}
+
+.nav-link:hover:after {
+  transform: scaleY(1);
+  opacity: 5 !important;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-brand {
+  height: 22px;
+  width: 117px;
+}
