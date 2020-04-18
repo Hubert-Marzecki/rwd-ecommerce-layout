@@ -24,10 +24,6 @@ html, body {
   overflow-x: hidden;
 }
 
-body {
-  height: 800vh;
-}
-
 .header {
   background-image: url(https://via.placeholder.com/1920x550);
   background-position: center;
@@ -50,7 +46,6 @@ body {
   color: black !important;
   position: relative;
   display: block;
-  font-weight: 500;
   transition: .5s;
   padding-bottom: 1px;
   z-index: 1;
@@ -256,21 +251,28 @@ body {
   padding: 10px 15px;
 }
 
-.special-info-small {
+.news-small-image {
   background-image: url("https://via.placeholder.com/380x310");
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: solid 4px white;
 }
 
-.special-info-medium {
+.news-medium-image {
   background-image: url(https://via.placeholder.com/769x310);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  border: solid 4px white;
+}
+
+.news-big-image {
+  background-image: url("https://via.placeholder.com/547x630");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 547px;
   border: solid 4px white;
 }
 
@@ -352,4 +354,357 @@ a.send-btn {
   font-size: 13px;
   font-family: "Jost";
   color: #454545;
+}
+
+.footer {
+  margin-top: 160px;
+}
+
+.social-icon {
+  margin-right: 30px;
+}
+
+.policy-holder {
+  margin-right: 5em;
+}
+
+.policy-holder .policy-item:nth-child(2) {
+  margin: 0 50px;
+}
+
+.policy-item {
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: "Jost";
+  text-decoration: none;
+  color: #151515;
+}
+
+.nation-changes-holder {
+  font-size: 13px;
+  font-family: "Jost";
+}
+
+.nation-changes-holder:nth-child(3) {
+  margin-left: 1em;
+}
+
+.changes-name {
+  color: #858585;
+  margin-right: 14px;
+}
+
+.copyrights {
+  margin-top: 64px;
+  margin-bottom: 14px;
+}
+
+.copyright-signature {
+  font-family: "Jost";
+  font-size: 13px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  /* Styles */
+  .logo {
+    position: absolute;
+    left: 35%;
+    transform: translateX(-50%);
+    top: 20px;
+    height: 22px;
+    width: 117px;
+  }
+  .bucket {
+    position: absolute;
+    right: 8%;
+    top: 22px;
+  }
+  .nav-link {
+    color: black !important;
+    margin-left: 1em;
+    position: relative;
+    display: block;
+    transition: .5s;
+    padding-bottom: 1px;
+    z-index: 1;
+  }
+  .nav-link:before {
+    border-bottom: none;
+    opacity: 0;
+    transition: 0s;
+  }
+  .nav-link:before {
+    border-bottom: none;
+    transition: 0s;
+  }
+}
+
+.glider-prev {
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 50%;
+}
+
+.glider-next {
+  position: absolute;
+  z-index: -1;
+  right: 10%;
+  top: 50%;
+}
+
+.news-small-image {
+  background-image: url("https://via.placeholder.com/380x310");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110%;
+  height: 310px;
+  border: none;
+  margin: 5px 5px !important;
+}
+
+.news-medium-image {
+  background-image: url(https://via.placeholder.com/769x310);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px 5px !important;
+  border: none;
+  height: 310px;
+}
+
+.news-big-image {
+  background-image: url("https://via.placeholder.com/547x630");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 547px;
+  margin: 5px 0px !important;
+  border: none;
+}
+
+.text-center-caption {
+  font-family: "Jost";
+  font-size: 13px;
+  color: #454545;
+}
+
+input {
+  font-size: 13px;
+  height: 25px;
+  padding: 10px 10px 10px 5px;
+  position: relative;
+  width: 90vw;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  color: black;
+  background: transparent;
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  opacity: 1;
+}
+
+label {
+  color: black;
+  position: absolute;
+  pointer-events: none;
+  top: 0px;
+  left: 5vw;
+  opacity: 0.5;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  font-size: 13px;
+  font-family: "Jost";
+}
+
+/* active state */
+a.send-btn {
+  position: absolute;
+  right: -5%;
+  color: black;
+  transition: 0.2s ease;
+  font-family: "Jost";
+}
+
+.form-adnotation {
+  position: absolute;
+  top: 45px;
+  left: 5vw;
+  font-size: 13px;
+  font-family: "Jost";
+  color: #454545;
+}
+
+.footer {
+  margin-top: 160px;
+}
+
+.social-icon {
+  margin-right: 30px;
+}
+
+.policy-holder {
+  margin-right: 0em;
+  margin-top: 34px;
+}
+
+.policy-holder .policy-item:nth-child(2) {
+  margin: 0 35px;
+}
+
+.policy-item {
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: "Jost";
+  text-decoration: none;
+  color: #151515;
+}
+
+.nation-changes-holder {
+  font-size: 13px;
+  font-family: "Jost";
+}
+
+.nation-changes-holder:nth-child(3) {
+  margin-left: 1em;
+}
+
+.changes-name {
+  color: #858585;
+  margin-right: 14px;
+}
+
+.copyrights {
+  margin-top: 64px;
+  margin-bottom: 14px;
+}
+
+.copyright-signature {
+  font-family: "Jost";
+  font-size: 13px;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+
+/**********
+  iPad 3
+  **********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
 }
