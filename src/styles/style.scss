@@ -34,10 +34,14 @@ $fontOldData: #aaaaaa;
     margin: 0;
     box-sizing: border-box;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x:hidden;
+}
 body{
-    height:500vh;
-    overflow-x:hidden;
-    max-width: 100vw;
+    height:800vh;
+   
 }
 
 .header{
@@ -229,12 +233,12 @@ body{
   .text-center{
     font-size: 48px;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 }
 
 .galery-product-item{
-  margin-top: 2em;
+  margin-top: 30px;
   .product-image{
     width: 99%;
   }
@@ -259,7 +263,116 @@ body{
   font-size: 13px;
 }
 
+
+.call-to-action {
+  border-radius: 0 !important;
+  @include product-name;
+  padding: 10px 15px;
+  
+}
+.special-info-small{
+  background-image: url("https://via.placeholder.com/380x310");
+  width: 100%;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 4px  rgb(255, 255, 255);
+}
+.special-info-medium {
+  background-image: url(https://via.placeholder.com/769x310);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border: solid 4px  rgb(255, 255, 255);
+}
+
+.centered-content {
+  margin-top: 100px;
+}
+.text-on-center{
+  font-family: "Jost";
+  font-size: 30px;
+
+}
+.text-center-caption {
+  font-family: "Jost";
+  font-size: 16px;
+  color: #454545 ;
+}
+
 // TEST
+.panel-content{
+  position: relative;
+  margin-top: 70px;
+}
+input {
+  font-size: 13px;
+  height: 25px;
+  padding: 10px 10px 10px 5px;
+  position: relative;
+  width: 640px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background: rgba(0,0,0,0);
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  opacity: 1;
+}
+
+label {
+  color: rgb(0, 0, 0); 
+ 
+  position: absolute;
+  pointer-events: none;
+  top: 0px;
+  left: 31%;
+  opacity: 0.5;
+  transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all; 
+  -webkit-transition: 0.2s ease all;
+  font-size: 13px;
+  font-family: "Jost";
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+ 
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+}
+
+
+/* active state */
+
+
+
+a.send-btn {
+  position: absolute;
+  left: 65%;
+  top:-5px;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease;
+  font-family: "Jost";
+}
+
+.form-adnotation{
+position: absolute;
+top: 45px;
+left: 31%;
+font-size: 13px;
+font-family: "Jost";
+color: #454545
+;
+}
 
 // TEST END 
 
@@ -267,7 +380,7 @@ body{
 // ZMIENIĆ OUTLINE NA NAV LINK NA MOBILE
 // PRRZESUNĄC LOGO W LEWO NA MOBILE 
 // PRZESUNĄĆ BUCKET W PRAWO NA MOBILE
-
-// KOLORY WSZEDZIE
+// KOLOR CZARNEGO WSZĘDZIE
+// CONTAINER-INFO - ZMIENIĆ DRÓGI ROW NA COLUMN NA MOBILE
 
 
