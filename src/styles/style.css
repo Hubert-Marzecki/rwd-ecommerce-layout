@@ -438,158 +438,137 @@ a.send-btn {
     border-bottom: none;
     transition: 0s;
   }
-}
-
-.glider-prev {
-  position: absolute;
-  z-index: -1;
-  left: 10%;
-  top: 50%;
-}
-
-.glider-next {
-  position: absolute;
-  z-index: -1;
-  right: 10%;
-  top: 50%;
-}
-
-.news-small-image {
-  background-image: url("https://via.placeholder.com/380x310");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 110%;
-  height: 310px;
-  border: none;
-  margin: 5px 5px !important;
-}
-
-.news-medium-image {
-  background-image: url(https://via.placeholder.com/769x310);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 5px 5px !important;
-  border: none;
-  height: 310px;
-}
-
-.news-big-image {
-  background-image: url("https://via.placeholder.com/547x630");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 547px;
-  margin: 5px 0px !important;
-  border: none;
-}
-
-.text-center-caption {
-  font-family: "Jost";
-  font-size: 13px;
-  color: #454545;
-}
-
-input {
-  font-size: 13px;
-  height: 25px;
-  padding: 10px 10px 10px 5px;
-  position: relative;
-  width: 90vw;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid black;
-  color: black;
-  background: transparent;
-  opacity: 1;
-  transition: 0.2s ease;
-}
-
-input:focus {
-  outline: none;
-  opacity: 1;
-}
-
-label {
-  color: black;
-  position: absolute;
-  pointer-events: none;
-  top: 0px;
-  left: 5vw;
-  opacity: 0.5;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-  font-size: 13px;
-  font-family: "Jost";
-}
-
-/* active state */
-a.send-btn {
-  position: absolute;
-  right: -5%;
-  color: black;
-  transition: 0.2s ease;
-  font-family: "Jost";
-}
-
-.form-adnotation {
-  position: absolute;
-  top: 45px;
-  left: 5vw;
-  font-size: 13px;
-  font-family: "Jost";
-  color: #454545;
-}
-
-.footer {
-  margin-top: 160px;
-}
-
-.social-icon {
-  margin-right: 30px;
-}
-
-.policy-holder {
-  margin-right: 0em;
-  margin-top: 34px;
-}
-
-.policy-holder .policy-item:nth-child(2) {
-  margin: 0 35px;
-}
-
-.policy-item {
-  white-space: nowrap;
-  font-size: 14px;
-  font-family: "Jost";
-  text-decoration: none;
-  color: #151515;
-}
-
-.nation-changes-holder {
-  font-size: 13px;
-  font-family: "Jost";
-}
-
-.nation-changes-holder:nth-child(3) {
-  margin-left: 1em;
-}
-
-.changes-name {
-  color: #858585;
-  margin-right: 14px;
-}
-
-.copyrights {
-  margin-top: 64px;
-  margin-bottom: 14px;
-}
-
-.copyright-signature {
-  font-family: "Jost";
-  font-size: 13px;
+  .glider-prev {
+    position: absolute;
+    z-index: -1;
+    left: 10%;
+    top: 50%;
+  }
+  .glider-next {
+    position: absolute;
+    z-index: -1;
+    right: 10%;
+    top: 50%;
+  }
+  .news-small-image {
+    background-image: url("https://via.placeholder.com/380x310");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110%;
+    height: 310px;
+    border: none;
+    margin: 5px 5px !important;
+  }
+  .news-medium-image {
+    background-image: url(https://via.placeholder.com/769x310);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px 5px !important;
+    border: none;
+    height: 310px;
+  }
+  .news-big-image {
+    background-image: url("https://via.placeholder.com/547x630");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 547px;
+    margin: 5px 0px !important;
+    border: none;
+  }
+  .text-center-caption {
+    font-family: "Jost";
+    font-size: 13px;
+    color: #454545;
+  }
+  input {
+    font-size: 13px;
+    height: 25px;
+    padding: 10px 10px 10px 5px;
+    position: relative;
+    width: 90vw;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    color: black;
+    background: transparent;
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+  input:focus {
+    outline: none;
+    opacity: 1;
+  }
+  label {
+    color: black;
+    position: absolute;
+    pointer-events: none;
+    top: 0px;
+    left: 5vw;
+    opacity: 0.5;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    font-size: 13px;
+    font-family: "Jost";
+  }
+  /* active state */
+  a.send-btn {
+    position: absolute;
+    right: -5%;
+    color: black;
+    transition: 0.2s ease;
+    font-family: "Jost";
+  }
+  .form-adnotation {
+    position: absolute;
+    top: 45px;
+    left: 5vw;
+    font-size: 13px;
+    font-family: "Jost";
+    color: #454545;
+  }
+  .footer {
+    margin-top: 160px;
+  }
+  .social-icon {
+    margin-right: 30px;
+  }
+  .policy-holder {
+    margin-right: 0em;
+    margin-top: 34px;
+  }
+  .policy-holder .policy-item:nth-child(2) {
+    margin: 0 35px;
+  }
+  .policy-item {
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: "Jost";
+    text-decoration: none;
+    color: #151515;
+  }
+  .nation-changes-holder {
+    font-size: 13px;
+    font-family: "Jost";
+  }
+  .nation-changes-holder:nth-child(3) {
+    margin-left: 1em;
+  }
+  .changes-name {
+    color: #858585;
+    margin-right: 14px;
+  }
+  .copyrights {
+    margin-top: 64px;
+    margin-bottom: 14px;
+  }
+  .copyright-signature {
+    font-family: "Jost";
+    font-size: 13px;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
