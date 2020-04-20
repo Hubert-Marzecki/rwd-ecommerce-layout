@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Oleg Ruzhytskyi",
+  "author": "Hubert Marzecki",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.4.1",

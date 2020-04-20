@@ -22,6 +22,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  color: #151515;
 }
 
 .header {
@@ -38,7 +39,6 @@ html, body {
 .navbar {
   padding: 1em 0 !important;
   font-size: 15px;
-  font-weight: 500;
   font-family: "Jost";
 }
 
@@ -157,36 +157,27 @@ html, body {
   filter: grayscale(100);
 }
 
+.product-info {
+  margin-top: -45px;
+  margin-left: 10px;
+  z-index: 10;
+}
+
 .product-name {
-  position: absolute;
   z-index: 4;
-  left: 9%;
-  top: 85%;
-  color: #454545;
   font-size: 13px;
   font-family: "Jost";
+  color: #454545;
 }
 
 .product-price {
-  position: absolute;
-  color: black;
-  left: 9%;
-  top: 91%;
-  z-index: 4;
-  font-size: 13px;
+  font-size: 0.8em;
   font-family: "Jost-Bold";
-  font-weight: 800;
 }
 
 .product-newPrice {
-  position: absolute;
-  color: black;
-  left: 31%;
-  top: 91%;
-  z-index: 4;
-  font-size: 13px;
+  font-size: 0.8em;
   font-family: "Jost-Bold";
-  font-weight: 800;
 }
 
 .glider-prev {
@@ -226,26 +217,24 @@ html, body {
 }
 
 .galery-product-name {
-  color: #454545;
   font-size: 13px;
   font-family: "Jost";
+  color: #454545;
 }
 
 .galery-product-price {
-  font-size: 13px;
+  font-size: 0.8em;
   font-family: "Jost-Bold";
-  font-weight: 800;
 }
 
 .galery-product-cart {
   margin-top: 10px;
+  font-size: 0.8em;
   font-family: "Jost-Bold";
-  font-size: 13px;
 }
 
 .call-to-action {
   border-radius: 0 !important;
-  color: #454545;
   font-size: 13px;
   font-family: "Jost";
   padding: 10px 15px;
@@ -276,37 +265,59 @@ html, body {
   border: solid 4px white;
 }
 
+.news-title {
+  margin-top: 10px;
+  font-size: 13px;
+  font-family: "Jost";
+  font-size: 24px;
+}
+
+.small-cta {
+  margin-top: 18px;
+  max-width: fit-content;
+  font-size: 13px;
+  font-family: "Jost";
+}
+
+.cta-underline {
+  border-bottom: 2px solid currentColor;
+}
+
 .centered-content {
   margin-top: 100px;
 }
 
 .text-on-center {
+  font-size: 13px;
   font-family: "Jost";
   font-size: 30px;
 }
 
 .text-center-caption {
+  font-size: 13px;
   font-family: "Jost";
   font-size: 16px;
   color: #454545;
 }
 
-.panel-content {
-  position: relative;
+.form {
   margin-top: 70px;
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
 }
 
 input {
   font-size: 13px;
+  font-family: "Jost";
   height: 25px;
   padding: 10px 10px 10px 5px;
-  position: relative;
-  width: 640px;
+  width: 40vw;
   border: none;
   outline: none;
   border-bottom: 2px solid black;
-  color: black;
-  background: transparent;
   opacity: 1;
   transition: 0.2s ease;
 }
@@ -321,7 +332,7 @@ label {
   position: absolute;
   pointer-events: none;
   top: 0px;
-  left: 31%;
+  left: 0;
   opacity: 0.5;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
@@ -340,17 +351,19 @@ input:focus ~ label, input:valid ~ label {
 /* active state */
 a.send-btn {
   position: absolute;
-  left: 65%;
+  right: 0vw;
   top: -5px;
-  color: black;
+  color: #151515;
   transition: 0.2s ease;
+  font-size: 13px;
   font-family: "Jost";
+  cursor: pointer;
 }
 
 .form-adnotation {
   position: absolute;
   top: 45px;
-  left: 31%;
+  left: 0;
   font-size: 13px;
   font-family: "Jost";
   color: #454545;
@@ -385,10 +398,6 @@ a.send-btn {
   font-family: "Jost";
 }
 
-.nation-changes-holder:nth-child(3) {
-  margin-left: 1em;
-}
-
 .changes-name {
   color: #858585;
   margin-right: 14px;
@@ -400,12 +409,12 @@ a.send-btn {
 }
 
 .copyright-signature {
-  font-family: "Jost";
   font-size: 13px;
+  font-family: "Jost";
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media only screen and (min-device-width: 319px) and (max-device-width: 767px) and (orientation: portrait) {
   /* Styles */
   .logo {
     position: absolute;
@@ -438,17 +447,8 @@ a.send-btn {
     border-bottom: none;
     transition: 0s;
   }
-  .glider-prev {
-    position: absolute;
-    z-index: -1;
-    left: 10%;
-    top: 50%;
-  }
-  .glider-next {
-    position: absolute;
-    z-index: -1;
-    right: 10%;
-    top: 50%;
+  .glider-button {
+    z-index: -10;
   }
   .news-small-image {
     background-image: url("https://via.placeholder.com/380x310");
@@ -479,56 +479,16 @@ a.send-btn {
     border: none;
   }
   .text-center-caption {
-    font-family: "Jost";
     font-size: 13px;
+    font-family: "Jost";
     color: #454545;
   }
   input {
     font-size: 13px;
+    font-family: "Jost";
     height: 25px;
     padding: 10px 10px 10px 5px;
-    position: relative;
     width: 90vw;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid black;
-    color: black;
-    background: transparent;
-    opacity: 1;
-    transition: 0.2s ease;
-  }
-  input:focus {
-    outline: none;
-    opacity: 1;
-  }
-  label {
-    color: black;
-    position: absolute;
-    pointer-events: none;
-    top: 0px;
-    left: 5vw;
-    opacity: 0.5;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-    font-size: 13px;
-    font-family: "Jost";
-  }
-  /* active state */
-  a.send-btn {
-    position: absolute;
-    right: -5%;
-    color: black;
-    transition: 0.2s ease;
-    font-family: "Jost";
-  }
-  .form-adnotation {
-    position: absolute;
-    top: 45px;
-    left: 5vw;
-    font-size: 13px;
-    font-family: "Jost";
-    color: #454545;
   }
   .footer {
     margin-top: 160px;
@@ -536,44 +496,63 @@ a.send-btn {
   .social-icon {
     margin-right: 30px;
   }
-  .policy-holder {
-    margin-right: 0em;
-    margin-top: 34px;
-  }
   .policy-holder .policy-item:nth-child(2) {
-    margin: 0 35px;
+    margin: 0 5px;
   }
   .policy-item {
     white-space: nowrap;
     font-size: 14px;
-    font-family: "Jost";
+    font-size: 0.8em;
+    font-family: "Jost-Bold";
     text-decoration: none;
-    color: #151515;
   }
   .nation-changes-holder {
-    font-size: 13px;
-    font-family: "Jost";
+    margin: 30px 0 !important;
   }
-  .nation-changes-holder:nth-child(3) {
-    margin-left: 1em;
+  .nation-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+    display: inline-flex;
   }
   .changes-name {
     color: #858585;
-    margin-right: 14px;
+    margin-right: 5px;
   }
   .copyrights {
     margin-top: 64px;
     margin-bottom: 14px;
   }
   .copyright-signature {
-    font-family: "Jost";
     font-size: 13px;
+    font-family: "Jost";
   }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
+  .product-info {
+    margin-top: -60px;
+    margin-left: 10px;
+    z-index: 10;
+  }
+  .glider-button {
+    z-index: -5;
+  }
+  input {
+    font-size: 13px;
+    font-family: "Jost";
+    height: 25px;
+    padding: 10px 10px 10px 5px;
+    width: 70vw;
+  }
+  .policy-holder .policy-item:nth-child(2) {
+    margin: 0 10px;
+  }
+  .nation-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 /* iPads (landscape) ----------- */
@@ -598,8 +577,20 @@ a.send-btn {
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 14px) and (max-width: 1600px) {
   /* Styles */
+  .glider-prev {
+    position: absolute;
+    z-index: -1;
+    left: 5%;
+    top: 50%;
+  }
+  .glider-next {
+    position: absolute;
+    z-index: -1;
+    right: 5%;
+    top: 50%;
+  }
 }
 
 /* Large screens ----------- */

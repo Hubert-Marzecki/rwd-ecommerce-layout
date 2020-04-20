@@ -11,20 +11,36 @@
   src: url('../assets/fonts/Jost-700-Bold.ttf');
 }
 
-$colorBlueBlack: #263a49;
-$fontStandard: #151515;
-$fontProductName: #454545;
-$fontOldData: #aaaaaa;
+// background on slider
+$darkBlue: #263a49;
+// primary color
+$primary-black: #151515;
+// product name /
+$second-grey: #454545;
+// old price /
+$light-grey: #959595;
+// product badge
+$third-black : #111111;
 
-@mixin product-name{
-  color: $fontProductName;
+@mixin standard-font{
   font-size: 13px;
   font-family: "Jost";
 }
-@mixin product-price{
-  font-size: 13px;
+
+@mixin standard-font-bigger{
+  font-size: 15px;
+  font-family: "Jost";
+}
+
+@mixin heavy-font{
+  font-size: 0.8em;
   font-family: "Jost-Bold";
-  font-weight: 800;
+}
+
+@mixin background-img-position {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -38,15 +54,14 @@ $fontOldData: #aaaaaa;
 html, body {
   max-width: 100%;
   overflow-x:hidden;
+  color: $primary-black;
+  @include standard-font;
 }
 
 
 .header{
     background-image: url(https://via.placeholder.com/1920x550);
-    // background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include background-img-position;
     height: 550px;
     position: relative;
     display: flex;
@@ -54,9 +69,7 @@ html, body {
 }
 .navbar{
    padding: 1em 0 !important; 
-   font-size: 15px;
-   font-weight: 500;
-   font-family: "Jost";
+  @include standard-font-bigger;
 }
 
 .nav-link{
@@ -71,7 +84,7 @@ html, body {
       content: '';
       position: absolute;
       top: 0;
-      left: 0%;
+      left: 0;
       width: 70%;
       height: 100%;
       border-bottom: 2px solid #000000;
@@ -144,7 +157,7 @@ html, body {
 .product-slider{
   position: relative;
   height: fit-content;
-  background-color: $colorBlueBlack;
+  background-color: $darkBlue;
   
 }
 .container-slider{
@@ -152,10 +165,10 @@ html, body {
 }
 .glider{
   &:first-child{
-    margin-left: 0px;
+    margin-left: 0;
   }
   &:last-child{
-    margin: 0px;
+    margin: 0;
   }
 
   
@@ -184,32 +197,22 @@ html, body {
 
 }
 
-
-.product-name{
-  position: absolute;
-  z-index: 4;
-  left: 9%;
-  top: 85%;
-  @include product-name;
+.product-info{
+  margin-top: -45px;
+  margin-left: 10px;
+  z-index: 10;
 }
-
-.product-price{
-  position: absolute;
-  color: black;
-  left: 9%;
-  top: 91%;
+.product-name{
   z-index: 4;
- @include product-price;
+  @include standard-font;
+  color: $second-grey;
+}
+.product-price{
+ @include heavy-font;
 }
 .product-newPrice{
-  position: absolute;
-  color: black;
-  left: 31%;
-  top: 91%;
-  z-index: 4;
-  font-size: 13px;
-  font-family: "Jost-Bold";
-  font-weight: 800;
+
+  @include heavy-font;
 }
 
 .glider-prev{
@@ -243,27 +246,29 @@ html, body {
 .item-info{
   margin-left: 2px;
 }
+
+
 .galery-product-badge{
   margin-top: 1em;
   font-size: 10px;
   font-family: "Jost-Heavy";
 }
 .galery-product-name{
-  @include product-name;
+  @include standard-font;
+  color: $second-grey;
 }
 .galery-product-price{
-  @include product-price;
+  @include heavy-font;
 }
 .galery-product-cart{
   margin-top: 10px;
-  font-family: "Jost-Bold";
-  font-size: 13px;
+  @include  heavy-font;
 }
 
 
 .call-to-action {
   border-radius: 0 !important;
-  @include product-name;
+  @include standard-font;
   padding: 10px 15px;
   
 }
@@ -271,67 +276,78 @@ html, body {
 
 .news-small-image {
   background-image: url("https://via.placeholder.com/380x310");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-img-position;
   border: solid 4px  rgb(255, 255, 255);
 }
 .news-medium-image {
   background-image: url(https://via.placeholder.com/769x310);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
+  @include background-img-position;
+
+
   border: solid 4px  rgb(255, 255, 255);
 }
-
 .news-big-image{
   background-image: url("https://via.placeholder.com/547x630");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-img-position;
+
   height: 547px;
   border: solid 4px  rgb(255, 255, 255);
 }
 
+.news-title{
+ margin-top: 10px;
+  @include standard-font;
+  font-size: 24px;
+}
+.small-cta{
+  margin-top: 18px;
+  max-width: fit-content;
+  @include standard-font;
+}
+.cta-underline{
+  border-bottom: 2px solid currentColor;
+
+}
 
 
 
 
-
-
-
+// TEXT - CENTER
 .centered-content {
   margin-top: 100px;
 }
 .text-on-center{
-  font-family: "Jost";
+  @include standard-font;
   font-size: 30px;
 
 }
 .text-center-caption {
-  font-family: "Jost";
+  @include standard-font;
   font-size: 16px;
-  color: #454545 ;
+  color: $second-grey ;
 }
 
 
 // INPUT
-.panel-content{
-  position: relative;
+
+.form{
   margin-top: 70px;
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
 }
 input {
-  font-size: 13px;
+  @include standard-font;
   height: 25px;
   padding: 10px 10px 10px 5px;
-  position: relative;
-  width: 640px;
+  width: 40vw;
   border: none;
   outline: none;
   border-bottom: 2px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-  background: rgba(0,0,0,0);
+
+  //background: rgba(0,0,0,0);
   opacity: 1;
   transition: 0.2s ease;
 }
@@ -346,14 +362,13 @@ label {
  
   position: absolute;
   pointer-events: none;
-  top: 0px;
-  left: 31%;
+  top: 0;
+  left: 0;
   opacity: 0.5;
   transition: 0.2s ease all; 
   -moz-transition: 0.2s ease all; 
   -webkit-transition: 0.2s ease all;
-  font-size: 13px;
-  font-family: "Jost";
+  @include standard-font;
 }
 
 /* active state */
@@ -371,21 +386,21 @@ input:focus ~ label, input:valid ~ label 		{
 
 a.send-btn {
   position: absolute;
-  left: 65%;
-  top:-5px;
-  color: rgb(0, 0, 0);
+  right: 0;
+  top: -5px;
+  color: $primary-black;
   transition: 0.2s ease;
-  font-family: "Jost";
+  @include standard-font;
+  cursor: pointer;
 }
 
 .form-adnotation{
 position: absolute;
 top: 45px;
-left: 31%;
-font-size: 13px;
-font-family: "Jost";
-color: #454545
-;
+left: 0;
+@include standard-font;
+color: $second-grey;
+
 }
 
 
@@ -410,16 +425,10 @@ margin-right: 5em;
   font-size: 14px;
   font-family: "Jost";
   text-decoration: none;
-  color: $fontStandard;
-
+  color: $primary-black;
 }
 .nation-changes-holder{
-  font-size: 13px;
-  font-family: "Jost";
-
-  &:nth-child(3){
-    margin-left: 1em;
-  }
+  @include standard-font;
 }
 .changes-name{
   color: #858585;
@@ -431,24 +440,23 @@ margin-right: 5em;
 }
 
 .copyright-signature{
-  font-family: "Jost";
-  font-size: 13px;
+  @include standard-font;
 }
 // TEST
 // TEST END 
 
 // ZMIENIĆ OUTLINE NA NAV LINK NA MOBILE done
 
-// PRRZESUNĄC LOGO W LEWO NA MOBILE 
-// PRZESUNĄĆ BUCKET W PRAWO NA MOBILE
-// KOLOR CZARNEGO WSZĘDZIE
-// CONTAINER-INFO - ZMIENIĆ DRÓGI ROW NA COLUMN NA MOBILE
+// PRRZESUNĄC LOGO W LEWO NA MOBILE done
+// PRZESUNĄĆ BUCKET W PRAWO NA MOBILE done
+// KOLOR CZARNEGO WSZĘDZIE  (chyba done)
+// CONTAINER-INFO - ZMIENIĆ DRÓGI ROW NA COLUMN NA MOBILE done
 // MOŻNA SIĘ POBAWIĆ CONTAINER
 // ZMNIEJSZYĆ POLICY HOLDER MARGIN NA 0 MOBILE
 // 
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+@media only screen and (min-device-width : 319px) and (max-device-width : 767px) and (orientation : portrait) {
   /* Styles */
 
   // HEADER
@@ -490,27 +498,16 @@ margin-right: 5em;
         }
   }
  
-
+.glider-button{
+  z-index: -10;
+}
   // SLIDER
-  .glider-prev{
-    position: absolute;
-    z-index: -1;
-    left: 10%;
-    top: 50%;
-  }
-  .glider-next{
-    position: absolute;
-    z-index: -1;
-    right:  10%;
-    top: 50%;
-  }
+
   
   // GALERY
 .news-small-image {
   background-image: url("https://via.placeholder.com/380x310");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-img-position;
   width: 110%;
   height: 310px;
   border: none;
@@ -518,9 +515,8 @@ margin-right: 5em;
 }
 .news-medium-image {
   background-image: url(https://via.placeholder.com/769x310);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-img-position;
+
   margin: 5px 5px !important;
   border: none;
   height: 310px;
@@ -528,76 +524,24 @@ margin-right: 5em;
 
 .news-big-image{
   background-image: url("https://via.placeholder.com/547x630");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-img-position;
+
   height: 547px;
-  margin: 5px 0px !important;
+  margin: 5px 0 !important;
   border: none
 }
 .text-center-caption {
-  font-family: "Jost";
-  font-size: 13px;
-  color: #454545 ;
+ @include standard-font;
+  color: $second-grey
 }
 
 // INPUT 
-input {
-  font-size: 13px;
-  height: 25px;
-  padding: 10px 10px 10px 5px;
-  position: relative;
-  width: 90vw;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-  background: rgba(0,0,0,0);
-  opacity: 1;
-  transition: 0.2s ease;
-}
-
-input:focus {
-  outline: none;
-  opacity: 1;
-}
-
-label {
-  color: rgb(0, 0, 0); 
- 
-  position: absolute;
-  pointer-events: none;
-  top: 0px;
-  left: 5vw;
-  opacity: 0.5;
-  transition: 0.2s ease all; 
-  -moz-transition: 0.2s ease all; 
-  -webkit-transition: 0.2s ease all;
-  font-size: 13px;
-  font-family: "Jost";
-}
-
-/* active state */
-
-
-a.send-btn {
-  position: absolute;
-  right: -5%;
-  
-  color: rgb(0, 0, 0);
-  transition: 0.2s ease;
-  font-family: "Jost";
-}
-
-.form-adnotation{
-position: absolute;
-top: 45px;
-left: 5vw;
-font-size: 13px;
-font-family: "Jost";
-color: #454545
-;
-}
+  input {
+    @include standard-font;
+    height: 25px;
+    padding: 10px 10px 10px 5px;
+    width: 90vw;
+  }
 
 
 // FOOTER
@@ -609,53 +553,96 @@ color: #454545
   margin-right: 30px;
 }
 .policy-holder  {
-margin-right: 0em;
-margin-top: 34px;
+
 
  .policy-item:nth-child(2) {
-  margin: 0 35px;
+  margin: 0 5px;
 
  }
 }
 .policy-item{
   white-space: nowrap;
   font-size: 14px;
-  font-family: "Jost";
+  @include heavy-font;
   text-decoration: none;
-  color: $fontStandard;
-
 }
+
+
 .nation-changes-holder{
-  font-size: 13px;
-  font-family: "Jost";
-
-  &:nth-child(3){
-    margin-left: 1em;
+  margin: 30px 0 !important;
+}
+.nation-container{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+  display: inline-flex;
+}
+  .changes-name{
+    color: #858585;
+    margin-right: 5px;
   }
-}
-.changes-name{
-  color: #858585;
-  margin-right: 14px;
-}
 .copyrights{
   margin-top: 64px;
   margin-bottom: 14px;
 }
 
 .copyright-signature{
-  font-family: "Jost";
-  font-size: 13px;
+ @include standard-font
 }
 
 }
   /* iPads (portrait and landscape) ----------- */
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  /* Styles */
+    //SLIDER
+
+
+    .product-info{
+      margin-top: -60px;
+      margin-left: 10px;
+      z-index: 10;
+    }
+
+    .glider-button {
+      z-index: -5;
+    }
+
+    //FORM
+    input {
+      @include standard-font;
+      height: 25px;
+      padding: 10px 10px 10px 5px;
+      width: 70vw;
+    }
+
+
+
+    .policy-holder {
+      .policy-item:nth-child(2) {
+        margin: 0 10px;
+
+      }
+    }
+
+
+
+    .nation-container {
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+
+
+
+
+
+
   }
   
   /* iPads (landscape) ----------- */
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-  /* Styles */
+    /* Styles */
   }
   
   /* iPads (portrait) ----------- */
@@ -673,9 +660,22 @@ margin-top: 34px;
   /* Styles */
   }
   /* Desktops and laptops ----------- */
-  @media only screen  and (min-width : 1224px) {
+  @media only screen  and (min-width : 14px) and (max-width: 1600px){
   /* Styles */
+    .glider-prev{
+      position: absolute;
+      z-index: -1;
+      left: 5%;
+      top: 50%;
+    }
+    .glider-next{
+      position: absolute;
+      z-index: -1;
+      right:  5%;
+      top: 50%;
+    }
   }
+
   
   /* Large screens ----------- */
   @media only screen  and (min-width : 1824px) {

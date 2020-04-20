@@ -6,3 +6,4 @@
 //   img.src = daftcodeImgUrl
 //   section.appendChild(img)
 //   document.body.appendChild(section)
+
