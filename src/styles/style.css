@@ -23,6 +23,8 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   color: #151515;
+  font-size: 13px;
+  font-family: "Jost";
 }
 
 .header {
@@ -34,6 +36,7 @@ html, body {
   position: relative;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 .navbar {
@@ -55,7 +58,7 @@ html, body {
   content: '';
   position: absolute;
   top: 0;
-  left: 0%;
+  left: 0;
   width: 70%;
   height: 100%;
   border-bottom: 2px solid #000000;
@@ -104,7 +107,7 @@ html, body {
   width: 117px;
 }
 
-.bucket {
+.basket {
   position: absolute;
   right: 17%;
   top: 22px;
@@ -123,6 +126,13 @@ html, body {
   color: white;
 }
 
+.header-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .product-slider {
   position: relative;
   height: fit-content;
@@ -134,11 +144,11 @@ html, body {
 }
 
 .glider:first-child {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .glider:last-child {
-  margin: 0px;
+  margin: 0;
 }
 
 .product {
@@ -152,14 +162,21 @@ html, body {
 }
 
 .product:hover {
-  opacity: 0.7;
+  opacity: 0.9;
   -webkit-filter: grayscale(100);
   filter: grayscale(100);
 }
 
+.product:hover .product-name {
+  color: white;
+}
+
+.product:hover .product-price {
+  color: white;
+}
+
 .product-info {
-  margin-top: -45px;
-  margin-left: 10px;
+  margin: -50px 0px 10px 10px;
   z-index: 10;
 }
 
@@ -171,13 +188,17 @@ html, body {
 }
 
 .product-price {
-  font-size: 0.8em;
+  font-size: 13px;
   font-family: "Jost-Bold";
 }
 
 .product-newPrice {
-  font-size: 0.8em;
+  font-size: 13px;
   font-family: "Jost-Bold";
+}
+
+.glider-button .glider-button-arrow {
+  cursor: pointer;
 }
 
 .glider-prev {
@@ -204,6 +225,7 @@ html, body {
 
 .galery-product-item .product-image {
   width: 99%;
+  cursor: pointer;
 }
 
 .item-info {
@@ -214,23 +236,27 @@ html, body {
   margin-top: 1em;
   font-size: 10px;
   font-family: "Jost-Heavy";
+  cursor: pointer;
 }
 
 .galery-product-name {
   font-size: 13px;
   font-family: "Jost";
   color: #454545;
+  cursor: pointer;
 }
 
 .galery-product-price {
-  font-size: 0.8em;
+  font-size: 13px;
   font-family: "Jost-Bold";
+  cursor: pointer;
 }
 
 .galery-product-cart {
   margin-top: 10px;
-  font-size: 0.8em;
+  font-size: 13px;
   font-family: "Jost-Bold";
+  cursor: pointer;
 }
 
 .call-to-action {
@@ -240,32 +266,35 @@ html, body {
   padding: 10px 15px;
 }
 
-.news-small-image {
+.grid-small-image {
   background-image: url("https://via.placeholder.com/380x310");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: solid 4px white;
+  cursor: pointer;
 }
 
-.news-medium-image {
+.grid-medium-image {
   background-image: url(https://via.placeholder.com/769x310);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: solid 4px white;
+  cursor: pointer;
 }
 
-.news-big-image {
+.grid-big-image {
   background-image: url("https://via.placeholder.com/547x630");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 547px;
   border: solid 4px white;
+  cursor: pointer;
+  height: 547px;
 }
 
-.news-title {
+.grid-item-title {
   margin-top: 10px;
   font-size: 13px;
   font-family: "Jost";
@@ -331,7 +360,7 @@ label {
   color: black;
   position: absolute;
   pointer-events: none;
-  top: 0px;
+  top: 0;
   left: 0;
   opacity: 0.5;
   transition: 0.2s ease all;
@@ -351,7 +380,7 @@ input:focus ~ label, input:valid ~ label {
 /* active state */
 a.send-btn {
   position: absolute;
-  right: 0vw;
+  right: 0;
   top: -5px;
   color: #151515;
   transition: 0.2s ease;
@@ -393,12 +422,16 @@ a.send-btn {
   color: #151515;
 }
 
+.policy-item:hover {
+  color: #151515;
+}
+
 .nation-changes-holder {
   font-size: 13px;
   font-family: "Jost";
 }
 
-.changes-name {
+.nation-adjustments {
   color: #858585;
   margin-right: 14px;
 }
@@ -450,32 +483,33 @@ a.send-btn {
   .glider-button {
     z-index: -10;
   }
-  .news-small-image {
+  .product {
+    margin-right: -10px;
+  }
+  .grid-small-image {
     background-image: url("https://via.placeholder.com/380x310");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 110%;
     height: 310px;
     border: none;
     margin: 5px 5px !important;
   }
-  .news-medium-image {
+  .grid-medium-image {
     background-image: url(https://via.placeholder.com/769x310);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 5px 5px !important;
-    border: none;
+    margin: 5px !important;
     height: 310px;
   }
-  .news-big-image {
+  .grid-big-image {
     background-image: url("https://via.placeholder.com/547x630");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 547px;
-    margin: 5px 0px !important;
+    margin: 5px 20px !important;
     border: none;
   }
   .text-center-caption {
@@ -502,7 +536,7 @@ a.send-btn {
   .policy-item {
     white-space: nowrap;
     font-size: 14px;
-    font-size: 0.8em;
+    font-size: 13px;
     font-family: "Jost-Bold";
     text-decoration: none;
   }
@@ -510,9 +544,9 @@ a.send-btn {
     margin: 30px 0 !important;
   }
   .nation-container {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    margin-right: 0px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
     display: inline-flex;
   }
   .changes-name {
@@ -552,6 +586,15 @@ a.send-btn {
   .nation-container {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-device-width: 1023px) and (max-device-width: 1199px) {
+  .product-info {
+    margin-top: -80px;
+    padding-top: -10px;
+    margin-left: 10px;
+    z-index: 10;
   }
 }
 
