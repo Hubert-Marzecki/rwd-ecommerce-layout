@@ -475,18 +475,44 @@ margin-right: 5em;
 .copyright-signature{
   @include standard-font;
 }
-// TEST
-// TEST END 
 
-// ZMIENIĆ OUTLINE NA NAV LINK NA MOBILE done
 
-// PRRZESUNĄC LOGO W LEWO NA MOBILE done
-// PRZESUNĄĆ BUCKET W PRAWO NA MOBILE done
-// KOLOR CZARNEGO WSZĘDZIE  (chyba done)
-// CONTAINER-INFO - ZMIENIĆ DRÓGI ROW NA COLUMN NA MOBILE done
-// MOŻNA SIĘ POBAWIĆ CONTAINER
-// ZMNIEJSZYĆ POLICY HOLDER MARGIN NA 0 MOBILE
-// 
+// WIDGETS
+
+.eclypse {
+  position: fixed;
+  border-radius: 100px;
+  top: 50%;
+  right: 45px;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  z-index: -100;
+  opacity: 0;
+  box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  cursor: pointer;
+  .eclypse-arrow-holder{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .arrow-top{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  transition-duration: 0.5s;
+}
+
+.arrow-visible{
+  z-index: 1000000;
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 319px) and (max-device-width : 767px) and (orientation : portrait) {
@@ -621,6 +647,10 @@ margin-right: 5em;
 .copyright-signature{
  @include standard-font
 }
+  .eclypse {
+    z-index: -1;
+
+  }
 
 }
   /* iPads (portrait and landscape) ----------- */
@@ -664,7 +694,11 @@ margin-right: 5em;
     }
 
 
+    .eclypse {
+      top: 50%;
+      right: 1px;
 
+    }
 
 
 
@@ -677,6 +711,11 @@ margin-right: 5em;
       padding-top: -10px;
       margin-left: 10px;
       z-index: 10;
+    }
+    .eclypse {
+      top: 50%;
+      right: 1px;
+
     }
   }
   /* iPads (landscape) ----------- */
@@ -714,7 +753,11 @@ margin-right: 5em;
       top: 50%;
     }
   }
+.eclypse {
+  top: 50%;
+  right: 1px;
 
+}
   
   /* Large screens ----------- */
   @media only screen  and (min-width : 1824px) {
