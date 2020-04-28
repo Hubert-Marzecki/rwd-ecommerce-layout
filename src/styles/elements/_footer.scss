@@ -1,0 +1,43 @@
+@import "elements/varibles";
+
+.footer{
+    margin-top: 160px;
+  }
+  
+  .social-icon{
+    margin-right: 30px;
+  }
+  .policy-holder  {
+  margin-right: 5em;
+  
+   .policy-item:nth-child(2) {
+    margin: 0 50px;
+  
+   }
+  }
+  .policy-item{
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: "Jost";
+    text-decoration: none;
+    color: $primary-black;
+    &:hover{
+      color: $primary-black;
+    }
+  
+  }
+  .nation-changes-holder{
+    @include standard-font;
+  }
+  .nation-adjustments{
+    color: #858585;
+    margin-right: 14px;
+  }
+  .copyrights{
+    margin-top: 64px;
+    margin-bottom: 14px;
+  }
+  
+  .copyright-signature{
+    @include standard-font;
+  }

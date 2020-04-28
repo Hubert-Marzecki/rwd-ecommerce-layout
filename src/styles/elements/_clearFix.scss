@@ -1,0 +1,15 @@
+@import "elements/varibles";
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x:hidden;
+  color: $primary-black;
+  @include standard-font;
+}

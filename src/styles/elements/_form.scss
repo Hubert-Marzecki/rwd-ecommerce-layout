@@ -1,0 +1,75 @@
+@import "elements/varibles";
+
+.form{
+    margin-top: 70px;
+    width: fit-content;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+  }
+  input {
+    @include standard-font;
+    height: 25px;
+    padding: 10px 10px 10px 5px;
+    width: 40vw;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+  
+    //background: rgba(0,0,0,0);
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    opacity: 1;
+  }
+  
+  label {
+    color: rgb(0, 0, 0); 
+   
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+    @include standard-font;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+   
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+  }
+  
+  
+  /* active state */
+  
+  
+  
+  a.send-btn {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    color: $primary-black;
+    transition: 0.2s ease;
+    @include standard-font;
+    cursor: pointer;
+  }
+  
+  .form-adnotation{
+  position: absolute;
+  top: 45px;
+  left: 0;
+  @include standard-font;
+  color: $second-grey;
+  
+  }
+  

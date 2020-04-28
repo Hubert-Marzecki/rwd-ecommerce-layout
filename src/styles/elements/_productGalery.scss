@@ -1,0 +1,87 @@
+@import "elements/varibles";
+.content-annoucment {
+    .text-center{
+      font-size: 48px;
+      margin-top: 100px;
+      margin-bottom: 70px;
+    }
+  }
+  
+  .galery-product-item{
+    margin-top: 30px;
+    .product-image{
+      width: 99%;
+      cursor: pointer;
+    }
+  }
+  .item-info{
+    margin-left: 2px;
+  }
+  
+  
+  .galery-product-badge{
+    margin-top: 1em;
+    font-size: 10px;
+    font-family: "Jost-Heavy";
+    cursor: pointer;
+  }
+  .galery-product-name{
+    @include standard-font;
+    color: $second-grey;
+    cursor: pointer;
+  }
+  .galery-product-price{
+    @include heavy-font;
+    cursor: pointer;
+  }
+  .galery-product-cart{
+    margin-top: 10px;
+    @include  heavy-font;
+    cursor: pointer;
+  }
+  
+  
+  .call-to-action {
+    border-radius: 0 !important;
+    @include standard-font;
+    padding: 10px 15px;
+    
+  }
+  
+  
+  .grid-small-image {
+    background-image: url("https://via.placeholder.com/380x310");
+    @include background-img-position;
+    border: solid 4px  rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  .grid-medium-image {
+    background-image: url(https://via.placeholder.com/769x310);
+    @include background-img-position;
+    border: solid 4px  rgb(255, 255, 255);
+    cursor: pointer;
+  
+  }
+  .grid-big-image{
+    background-image: url("https://via.placeholder.com/547x630");
+    @include background-img-position;
+    border: solid 4px  rgb(255, 255, 255);
+    cursor: pointer;
+    height: 547px;
+  }
+  
+  .grid-item-title{
+   margin-top: 10px;
+    @include standard-font;
+    font-size: 24px;
+  }
+  .small-cta{
+    margin-top: 18px;
+    max-width: fit-content;
+    @include standard-font;
+  }
+  .cta-underline{
+    border-bottom: 2px solid currentColor;
+  
+  }
+  
