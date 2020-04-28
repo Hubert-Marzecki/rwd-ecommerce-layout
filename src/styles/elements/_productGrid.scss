@@ -50,20 +50,20 @@
   
   
   .grid-small-image {
-    background-image: url("https://via.placeholder.com/380x310");
+    background-image: url("https://picsum.photos/id/300/380/310");
     @include background-img-position;
     border: solid 4px  rgb(255, 255, 255);
     cursor: pointer;
   }
   .grid-medium-image {
-    background-image: url(https://via.placeholder.com/769x310);
+    background-image: url("https://picsum.photos/id/1000/769/310");
     @include background-img-position;
     border: solid 4px  rgb(255, 255, 255);
     cursor: pointer;
   
   }
   .grid-big-image{
-    background-image: url("https://via.placeholder.com/547x630");
+    background-image: url("https://picsum.photos/id/302/547/630");
     @include background-img-position;
     border: solid 4px  rgb(255, 255, 255);
     cursor: pointer;

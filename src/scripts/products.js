@@ -5,7 +5,7 @@ export default  function productsApiTemplate () {
 
 
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1020/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -14,7 +14,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1031/309/390",
             badge: {
                 name: '',
                 image: null,
@@ -23,7 +23,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1033/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -32,7 +32,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/129/309/390",
             badge: {
                 name: '',
                 image: null,
@@ -41,7 +41,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/14/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -50,7 +50,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1035/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -60,7 +60,7 @@ export default  function productsApiTemplate () {
 
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1036/309/390",
             badge: {
                 name: '',
                 image: null,
@@ -69,7 +69,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1037/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -78,7 +78,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1038/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -87,7 +87,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1039/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -96,7 +96,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/108/309/390",
             badge: {
                 name: '',
                 image: null,
@@ -105,7 +105,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1068/309/390",
             badge: {
                 name: 'new',
                 image: bolt,
@@ -114,7 +114,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: 'https://via.placeholder.com/309x390',
+            img: 'https://picsum.photos/id/176/309/390',
             badge: {
                 name: 'new',
                 image: bolt,
@@ -123,7 +123,7 @@ export default  function productsApiTemplate () {
             price: 220,
         },
         {
-            img: "https://via.placeholder.com/309x390",
+            img: "https://picsum.photos/id/1053/309/390",
             badge: {
                 name: '',
                 image: '../assets/kz-bolt-lint.png'

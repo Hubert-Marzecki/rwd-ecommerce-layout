@@ -1,7 +1,7 @@
 @import "elements/varibles";
 
 .header{
-    background-image: url(https://via.placeholder.com/1920x550);
+    background-image: url(https://picsum.photos/id/1055/1920/550);
     @include background-img-position;
     height: 550px;
     position: relative;
