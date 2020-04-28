@@ -1,20 +1,21 @@
 ## RWD e-commerce layout preparded during Daft Academy course. 
 
-Technology:
+## Technology:
 - Webpack
 - Sass (ooscss)
 - Bootscrap
+- Glider.js
 - JavaScript (ES6+)
 
-Features:
+## Features:
 - Reposnsive product slider
 - Responsive grid galery
-- Updating on project footer
+- Updating date at project footer
 - Scroll to top button
-- Display more products button (from hand made API)
+- Display more products button (from makeshift API)
 
 
-Credits:
+## Credits:
 images from Lorem Picsum
 mockup from DaftAcademy
 
