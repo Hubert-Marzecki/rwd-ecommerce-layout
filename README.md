@@ -8,8 +8,8 @@
 - JavaScript (ES6+)
 
 ## Features:
-- Reposnsive product slider
-- Responsive grid galery
+- Resposnsive product slider
+- Responsive grid gallery
 - Updating date at project footer
 - Scroll to top button
 - Display more products button (from makeshift API)
