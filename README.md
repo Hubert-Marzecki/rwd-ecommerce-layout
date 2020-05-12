@@ -1,4 +1,4 @@
-## RWD e-commerce layout preparded during Daft Academy course. 
+## RWD e-commerce layout prepared during Daft Academy course. 
 
 ## Technology:
 - Webpack
