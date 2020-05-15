@@ -1,7 +1,7 @@
-@import "elements/varibles";
+@import "./varibles";
 
 .header{
-    background-image: url(https://picsum.photos/id/1055/1920/550);
+    background-image: url(https://picsum.photos/id/200/1920/550);
     @include background-img-position;
     height: 550px;
     position: relative;
@@ -80,8 +80,9 @@
   right: 17%;
   top: 22px;
 }
-.bag-items{
+.bag__items{
   position: relative;
+
   .ammount{
     position: absolute;
     left: 50%;
@@ -91,7 +92,7 @@
     color: white;
   }
 }
-.header-overlay{
+.header__overlay{
   position: absolute;
   top: 50%;
   left: 50%;

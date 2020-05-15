@@ -1,87 +1,85 @@
-@import "elements/varibles";
-.content-annoucment {
-    .text-center{
-      font-size: 48px;
-      margin-top: 100px;
-      margin-bottom: 70px;
+@import "./varibles";
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1920px;
+
+
+
+
+.product__grid {
+
+  margin-top: 50px;
+
+  &__container {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(2, 310px);
+    grid-gap: 10px;
+
+    @media (min-width: $xxl) {
+      width: 54%;
+    }
+    @media (max-width: $lg) {
+      width: 90%;
+      display: block;
     }
   }
-  
-  .galery-product-item{
-    margin-top: 30px;
-    .product-image{
-      width: 99%;
-      cursor: pointer;
+  &__card {
+    @media (max-width: $lg) {
+      height: 310px;
+      margin-bottom: 9px;
+    }
+    &--big {
+      background: center  ;
+      background-size: cover;
+      grid-area: 1/1/3/5;
+    }
+    &--small {
+      background: center  ;
+      background-size: cover;
+      grid-area: 1/5/2/8;
+    }
+    &--small--second {
+      background: center  ;
+      background-size: cover;
+      grid-area: 1/8/2/11;
+    }
+    &--long {
+      background: center  ;
+      background-size: cover;
+      grid-area: 2/5/3/11;
     }
   }
-  .item-info{
-    margin-left: 2px;
+  &__content {
+    padding-top: 41px;
+    padding-left: 41px;
+    font-weight: 500;
+    @media (max-width: $lg) {
+      padding-top: 36px;
+      padding-left: 31px;
+    }
   }
-  
-  
-  .galery-product-badge{
-    margin-top: 1em;
-    font-size: 10px;
-    font-family: "Jost-Heavy";
-    cursor: pointer;
-  }
-  .galery-product-name{
-    @include standard-font;
-    color: $second-grey;
-    cursor: pointer;
-  }
-  .galery-product-price{
-    @include heavy-font;
-    cursor: pointer;
-  }
-  .galery-product-cart{
-    margin-top: 10px;
-    @include  heavy-font;
-    cursor: pointer;
-  }
-  
-  
-  .call-to-action {
-    border-radius: 0 !important;
-    @include standard-font;
-    padding: 10px 15px;
-    
-  }
-  
-  
-  .grid-small-image {
-    background-image: url("https://picsum.photos/id/300/380/310");
-    @include background-img-position;
-    border: solid 4px  rgb(255, 255, 255);
-    cursor: pointer;
-  }
-  .grid-medium-image {
-    background-image: url("https://picsum.photos/id/1000/769/310");
-    @include background-img-position;
-    border: solid 4px  rgb(255, 255, 255);
-    cursor: pointer;
-  
-  }
-  .grid-big-image{
-    background-image: url("https://picsum.photos/id/302/547/630");
-    @include background-img-position;
-    border: solid 4px  rgb(255, 255, 255);
-    cursor: pointer;
-    height: 547px;
-  }
-  
-  .grid-item-title{
-   margin-top: 10px;
-    @include standard-font;
+  &__name {
     font-size: 24px;
+    line-height: normal;
+    margin-bottom: 18px;
   }
-  .small-cta{
-    margin-top: 18px;
-    max-width: fit-content;
-    @include standard-font;
+  &__link {
+    font-size: 13px;
+    color: $primary-black;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    text-decoration: underline;
+    &:hover {
+      color: $primary-black;
+      text-decoration: none;
+
+    }
   }
-  .cta-underline{
-    border-bottom: 2px solid currentColor;
-  
-  }
-  
+}

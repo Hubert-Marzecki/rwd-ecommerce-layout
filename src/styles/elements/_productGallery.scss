@@ -1,0 +1,48 @@
+.content-annoucment {
+  .text-center{
+    font-size: 48px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+}
+
+.gallery-product-item{
+  margin-top: 30px;
+  .product-image{
+    width: 99%;
+    cursor: pointer;
+  }
+}
+.item-info{
+  margin-left: 2px;
+}
+
+
+.gallery-product-badge{
+  margin-top: 1em;
+  font-size: 10px;
+  font-family: "Jost-Heavy";
+  cursor: pointer;
+}
+.gallery-product-name{
+  @include standard-font;
+  color: $second-grey;
+  cursor: pointer;
+}
+.gallery-product-price{
+  @include heavy-font;
+  cursor: pointer;
+}
+.gallery-product-cart{
+  margin-top: 10px;
+  @include  heavy-font;
+  cursor: pointer;
+}
+
+
+.call-to-action {
+  border-radius: 0 !important;
+  @include standard-font;
+  padding: 10px 15px;
+
+}

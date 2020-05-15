@@ -1,5 +1,5 @@
 export default function glider() {
-    new Glider(document.querySelector('.glider'), {
+    var glider = new Glider(document.querySelector('.glider'), {
         slidesToShow: 6.5,
         slidesToScroll: 5,
         draggable: true,
@@ -9,4 +9,5 @@ export default function glider() {
             next: '.glider-next'
         }
     });
-}
+    glider.refresh(true);
+ }

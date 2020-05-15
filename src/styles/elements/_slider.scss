@@ -1,11 +1,11 @@
-@import "elements/varibles";
-.product-slider{
+@import "varibles";
+.product__slider{
     position: relative;
     height: fit-content;
     background-color: $darkBlue;
     
   }
-  .container-slider{
+  .container__slider{
     margin: 40px auto;
   }
   .glider{
