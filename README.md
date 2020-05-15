@@ -2,7 +2,7 @@
 
 ## Technology:
 - Webpack
-- Sass (ooscss)
+- Sass
 - Bootscrap
 - Glider.js
 - JavaScript (ES6+)
@@ -12,12 +12,13 @@
 - Responsive grid gallery
 - Updating date at project footer
 - Scroll to top button
-- Display more products button (from makeshift API)
+- Products from Asos API
 
 
 ## Credits:
 images from Lorem Picsum
 mockup from DaftAcademy
+Asos API
 
 ## To run this project
 
