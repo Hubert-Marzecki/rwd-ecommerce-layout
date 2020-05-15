@@ -1,6 +1,6 @@
 wnode_modules/
 node_modules
-
+.idea
 style.css
 style.min.css
 
