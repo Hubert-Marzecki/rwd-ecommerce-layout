@@ -2,7 +2,7 @@
 
 ## Technology:
 - Webpack
-- Sass (ooscss)
+- Sass
 - Bootscrap
 - Glider.js
 - JavaScript (ES6+)
