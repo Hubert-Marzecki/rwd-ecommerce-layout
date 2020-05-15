@@ -14,7 +14,7 @@ $xxl: 1920px;
   margin-top: 50px;
 
   &__container {
-    width:65%;
+    width:60%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(10,1fr);
@@ -22,7 +22,7 @@ $xxl: 1920px;
     grid-gap: 10px;
 
     @media (min-width: $xxl) {
-      width: 65%;
+      width: 60%;
     }
     @media (max-width: $lg) {
       width: 90%;
